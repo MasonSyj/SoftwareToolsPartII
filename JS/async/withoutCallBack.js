@@ -12,13 +12,12 @@ getStudents = () => {
     }, 2000);
 }
 
-addStudent = (student, callback) => {
+addStudent = (student) => {
     setTimeout(() => {
         students.push(student);
-        callback();
     }, 1000);
 }
-
-addStudent({"name":"andy", "major":"cs", "mark":80}, getStudents);
+getStudents();
+addStudent({"name":"andy", "major":"cs", "mark":80});
 console.log("hello world");
 

@@ -5,16 +5,16 @@
         <title>List of Units</title>
     </head>
     <body>
-        <h1>Table showing units</h1>
+        <h1>Table showing students</h1>
         <table>
             <tr>
                 <th>code</th>
                 <th>title</th>
             </tr>
 
-            <tr th:each="unit : ${units}">
-                <td th:href="'/unit/' + ${unit.code}" th:text="${unit.code}"></td>
-                <td th:text="${unit.title}"></td>
+            <tr th:each="student : ${students}">
+                <td th:text="${student.id}"></td>
+                <td th:text="${student.name}"></td>
             </tr>
         </table>
         <h1>List of units</h1>

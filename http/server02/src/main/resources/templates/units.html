@@ -5,6 +5,18 @@
         <title>List of Units</title>
     </head>
     <body>
+        <h1>Table showing units</h1>
+        <table>
+            <tr>
+                <th>code</th>
+                <th>title</th>
+            </tr>
+
+            <tr th:each="unit : ${units}">
+                <td th:href="'/unit/' + ${unit.code}" th:text="${unit.code}"></td>
+                <td th:text="${unit.title}"></td>
+            </tr>
+        </table>
         <h1>List of units</h1>
         <ul th:each="unit : ${units}">
             <li>

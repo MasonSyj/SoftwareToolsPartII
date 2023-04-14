@@ -49,6 +49,32 @@ public class Controller {
         cx.setVariable("students", students);
         return templates.render("students.html", cx);
     }
+    @GetMapping("/student/{code}")
+    public ResponseEntity<String>
+    studentDetailPage(@PathVariable String code) {
+        Database d = new DatabaseImpl();
+        Student u = null;
+        for (Student s : d.getStudents()) {
+            if (s.getName().equals(code)) {
+                u = s;
+                break;
+            }
+        }
+
+        if (u == null) {
+            return ResponseEntity
+                    .status(404)
+                    .header(HttpHeaders.CONTENT_TYPE, "text/plain")
+                    .body("No student with code " + code);
+        }
+
+        Context cx = new Context();
+        cx.setVariable("student", u);
+        return ResponseEntity
+                .status(200)
+                .header(HttpHeaders.CONTENT_TYPE, "text/html")
+                .body(templates.render("student.html", cx));
+    }
     @GetMapping("/unit/{code}")
     public ResponseEntity<String> 
     unitDetailPage(@PathVariable String code) {

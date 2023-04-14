@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Unit details</title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css">
+    </head>
+    <body>
+        <h1>Student details</h1>
+        <h3 th:text="'Student id: ' + ${student.getId()}"></h3>
+        <h3 th:text="'Student name: ' + ${student.getName()}"></h3>
+        <table>
+            <tr>
+                <th>unit.code</th>
+                <th>unit.title</th>
+                <th>grade</th>
+            </tr>
+
+            <tr th:each="unit : ${student.getGrades()}">
+                <td th:text="${unit.getFirst().getCode()}"></td>
+                <td th:text="${unit.getFirst().getTitle()}"></td>
+                <td th:text="${unit.getSecond()}"></td>
+            </tr>
+        </table>
+    </body>
+</html>

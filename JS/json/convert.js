@@ -3,7 +3,8 @@ const obj = {
     "age": 23,
     "id": "djaaio"
 }
-
+console.log(obj);
+console.log("--------separate line-------");
 const jsonF = JSON.stringify(obj);
 console.log("jsonFormat:" + jsonF);
 
@@ -13,3 +14,11 @@ console.log(objectised);
 console.log(objectised.toString());
 console.log("object:" + objectised);
 console.log("object: " + "" + objectised.age);
+
+const obj2 = {
+    name: "tina",
+    age: 24,
+    id: "jfskdla"
+}
+
+console.log(obj2);

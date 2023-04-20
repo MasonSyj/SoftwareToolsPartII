@@ -13,3 +13,4 @@ console.log(objectised);
 console.log(objectised.toString());
 console.log("object:" + objectised);
 console.log("object: " + "" + objectised.age);
+console.log("object: " + objectised.age);

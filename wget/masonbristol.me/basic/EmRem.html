@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Em And Rem</title>
+    <style>
+      html {
+        font-size: 16px;
+      }
+
+      body {
+        font-size: 1.5em;
+      }
+
+      .container {
+        width: 20em;
+        margin: 0 auto;
+      }
+
+      .box1 {
+        width: 10em;
+        background-color: #f0f0f0;
+        margin-bottom: 1em;
+      }
+
+      .box2 {
+        width: 10rem;
+        background-color: #f3f3f3;
+      }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="box1">Hello World From box1, it uses 10 em, which is 10 * 16 * 1.5 due to body tag render 1.5em font-size</div>
+    <div class="box2">This message is from box2, it uses 10 rem, which is 10 * 16 px</div>
+</div>
+</body>
+</html>

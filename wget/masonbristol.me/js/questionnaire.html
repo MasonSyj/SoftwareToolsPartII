@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+  <head>
+    <title>template</title>
+	<style>
+    .numberInput {
+        margin-right:50px;
+    }
+	</style>
+    <link rel="stylesheet" type="text/css" href="scroll.css">
+  </head>
+  <body>
+  <h1> Big Five Personality Traits Questionnaire <h1>
+  <h3>Scale </h3>
+  <ol>
+      <li> Strongly Disagree </li>
+      <li> Disagree </li>
+      <li> Netural </li>
+      <li> Agree </li>
+      <li> Strongly Agree </li>
+  </ol>
+  <h2> Openness to experience </h2>
+  <p class="result" id="o">Result this part: </p>
+  <ul>
+  <li>I enjoy trying new things, even if they are risky.</li>
+  <input type="number" min="1" max="100" required id="o1-input" class="numberInput">
+  <select name="o1" id="o1-select">
+     <option value="1">1</option>
+     <option value="2">2</option>
+     <option value="3">3</option>
+     <option value="4">4</option>
+     <option value="5">5</option>
+  </select>
+  <input type="range" min="0" max="10" step="1" value="5" class="slider">
+  </div>
+  <li>I am interested in learning about new cultures and ways of thinking.</li>
+  <input type="number" min="1" max="100" required id="o2-input" class="numberInput">
+  <select name="o2" id="o2-select">
+     <option value="1">1</option>
+     <option value="2">2</option>
+     <option value="3">3</option>
+     <option value="4">4</option>
+     <option value="5">5</option>
+  </select>
+  <li>I am creative and enjoy coming up with new ideas.</li>
+  <input type="number" min="1" max="100" required id="o3-input" class="numberInput">
+  <select name="o3" id="o3-select">
+     <option value="1">1</option>
+     <option value="2">2</option>
+     <option value="3">3</option>
+     <option value="4">4</option>
+     <option value="5">5</option>
+  </select>
+  <li>I often daydream and let my imagination run wild.</li>
+  <input type="number" min="1" max="100" required id="o4-input" class="numberInput">
+  <select name="o4" id="o4-select">
+     <option value="1">1</option>
+     <option value="2">2</option>
+     <option value="3">3</option>
+     <option value="4">4</option>
+     <option value="5">5</option>
+  </select>
+  <li>I am not afraid to speak my mind, even if it goes against convention.</li>
+  <input type="number" min="1" max="100" required id="o5-input" class="numberInput">
+  <select name="o5" id="o5-select">
+     <option value="1">1</option>
+     <option value="2">2</option>
+     <option value="3">3</option>
+     <option value="4">4</option>
+     <option value="5">5</option>
+  </select>
+  </ul>
+  <input type="SUBMIT" value="submit result"  class="o1-submit">
+  
+  <script>
+    const res = document.querySelector(".result");
+
+document.querySelector(".o1-submit").addEventListener("click", function() {
+    const numsInput = document.querySelectorAll(".numberInput");
+    let value = 0;
+    for (const numInput of numsInput){
+        value += parseInt(numInput.value);
+    }
+    res.textContent = `Result this part: ${value}`;     
+});
+
+  </script>
+  </body>
+</html>

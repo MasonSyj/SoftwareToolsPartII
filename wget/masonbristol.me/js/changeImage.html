@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+  <head>
+    <title>Click to Change Image</title>
+	<meta http-equiv="Content-Type" content="text/html: charset=utf-8" />
+	<style>
+	</style>
+  
+  </head>
+  <body>
+	<p><img src="/resource/4.5.jpg"/>Hello World. </p>
+    <script>
+  const image = document.querySelector("img");
+  const images = ["/resource/4.5.jpg", "/resource/4.6.jpg", "/resource/4.1.jpg", "/resource/4.2.jpg", "/resource/4.3.jpg", "/resource/4.4.jpg"];
+  let currentImageIndex = 0;
+
+  image.onclick = () => {
+    currentImageIndex = (currentImageIndex + 1) % images.length;
+    image.src = images[currentImageIndex];
+  };
+</script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Media Query</title>
+    <style>
+        @media print { <!-- Something will happen when print the page -->
+            body{
+                font-size: 24pt;
+            }
+        }
+        
+        @media screen and (min-width: 600px){
+            body{
+                background: #00AAFF;
+            }
+        }
+
+        <!-- the color will change due to the phone is held landscape or portrait -->
+        @media (orientation: landscape){
+            body{
+                color: red;
+            }
+        }
+        
+        @media (hover: hover){
+            body{
+                font-size: 24pt;
+            }
+        }
+            
+        @media (orientation: portrait){
+            body{
+                color: green;
+            }
+        }
+
+        .interact:hover{
+            font-size: 32px;
+            color: red;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>A big hello World</h1>
+    <h2>This message is from bristol.</h2>
+    <h3>MVB 1.15</h3>
+    <p>Here's interaction part:</p>
+    <p class="interact">A meaningless text</p>
+    <p class="interact">Hello World Again</p>
+    <p class="interact">Does it work?</p>
+</body>
+</html>

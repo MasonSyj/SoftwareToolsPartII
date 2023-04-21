@@ -1,0 +1,24 @@
+@charset "utf-8";
+
+a {
+	color: #0066cc; /* Set link color to a blue shade */
+	text-decoration: none; /* Remove underline from link */
+}
+
+a:hover {
+	color: #003366; /* Darken link color on hover */
+	text-decoration: underline; /* Add underline on hover */
+}
+
+a:focus {
+	outline: 2px solid #0066cc; /* Add a blue outline when link is in focus */
+}
+
+a:visited {
+	color: #663399; /* Change link color for visited links */
+}
+
+a:active {
+	color: #ff0000; /* Change link color when clicked */
+	text-decoration: underline; /* Add underline when clicked */
+}

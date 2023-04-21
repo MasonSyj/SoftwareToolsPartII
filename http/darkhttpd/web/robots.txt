@@ -1,0 +1,7 @@
+User-agent: mason
+Disallow: /leo*
+
+
+User-agent: *
+Allow: /
+

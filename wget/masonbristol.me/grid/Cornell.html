@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cornell</title>
+    <style>
+        .container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(3, minmax(100px, auto));
+        }
+
+        .header{
+            background-color: #00AAFF;
+            grid-column: 1 / -1;
+            grid-row: 1;
+        }
+
+        .side {
+            grid-column: 1;
+            grid-row: 2;
+            border-right:4px solid #EEE8AA;
+            margin-right: 10px;
+        }
+
+        .main {
+            grid-column: 2 / -1;
+            grid-row: 2;
+        }
+
+        .footer {
+            background-color: #7FFF00;
+            grid-column: 1 / -1;
+            grid-row: 3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+       <div class="header">header</div>
+       <div class="side">side</div>
+       <div class="main">main</div>
+       <div class="footer">footer</div>
+    </div>
+</body>
+</html>

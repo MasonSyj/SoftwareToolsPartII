@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+  <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css">
+      <title>HTTP Lecture Notes</title>
+	<style>
+	</style>
+  </head>
+  <body>
+	<h1>
+	<table>
+	<tr>
+		<th>1</th>
+		<th>2</th>
+		<th>3</th>	
+	<tr>
+		<td>11</td>
+		<td>21</td>
+		<td>31</td>
+	</table>
+	<h1>HTTP</h1>
+	<ul>
+		<li>Hyper Text Transfer Protocol</li>
+		<li>Tim Berners-Lee, CERN, 1989</li>
+		<li>version 1.1, RFC 7230-7235</li>
+		<li>Protocols: Give me block #200; Here you are: 0A 2F 33 4D </l1>
+		<li>Client-Server: 1.Client send request, 2.Server send response</li>
+	</ul>
+	<pre><code>
+while (1) {
+	req = read();
+	resp = serve(req);
+	write(resp);
+}	
+	</code></pre>
+
+	<pre><code>
+HTTP Request
+GET /index.html HTTP/1.1
+Host: www.bristol.ac.uk
+Connection: close
+	</code></pre>
+
+	<pre><code>
+Resolving bristol.ac.uk (bristol.ac.uk)... 137.222.0.38
+Connecting to bristol.ac.uk (bristol.ac.uk)|137.222.0.38|:80... connected.
+HTTP request sent, awaiting response... 
+  HTTP/1.1 301 Moved Permanently
+  Date: Wed, 19 Apr 2023 19:46:15 GMT
+  Server: Apache
+  Location: https://www.bristol.ac.uk/
+  Content-Length: 234
+  Keep-Alive: timeout=5, max=256
+  Connection: Keep-Alive
+  Content-Type: text/html; charset=iso-8859-1
+  Set-Cookie: BIGipServer~UOBWeb~wwwbristol.app~wwwbristol=3858764460.0.0000; path=/; Httponly
+Location: https://www.bristol.ac.uk/ [following]
+--2023-04-19 20:47:31--  https://www.bristol.ac.uk/
+Resolving www.bristol.ac.uk (www.bristol.ac.uk)... 137.222.0.38
+Connecting to www.bristol.ac.uk (www.bristol.ac.uk)|137.222.0.38|:443... connected.
+HTTP request sent, awaiting response... 
+  HTTP/1.1 200 OK
+  Date: Wed, 19 Apr 2023 19:47:30 GMT
+  Server: Apache
+  Vary: Host
+  Accept-Ranges: bytes
+  Content-Length: 73476
+  Keep-Alive: timeout=5, max=256
+  Connection: Keep-Alive
+  Content-Type: text/html
+  Set-Cookie: uob_ck_1=!zckTvfkFX2PMb5wgPQnXTyziEub+3r/XmDVs0HNsQzsE12BofR2f8EBcPVfSR2604lNm859zgA==; path=/; Httponly; Secure
+Length: 73476 (72K) [text/html]
+
+	</code></pre>
+	<h1>HTTP Methods</h1>	
+	<ol>
+		<li>GET</li>
+		<li>HEAD</li>
+		<li>POST</li>
+		<li>PUT</li>
+		<li>DELETE</li>
+	</ol>
+
+	<h1>Response code</h1>
+	<ul>
+		<li>1xx: information</li>
+		<li>2xx: success (200 OK, 201 Created,...)</li>
+		<li>3xx: redirect (301 Moved Permanently, ...)</li>
+		<li>4xx: client error (400 Bad Request, 403 Forbidden, 404 Not Found, ...)</li>
+		<li>5xx: server error (500 Internal Server Error ...)</li>
+	</ul>
+	<h1>Content-type</h1>
+	<ul>
+		<li>text/plain</li>
+		<li>text/html</li>
+		<li>image/jpeg</li>
+		<li>application/pdf</li>
+		<li>video/mp4</li>
+	</ul>
+	<h1>Encoding</h1>
+	<hr>
+	<h1>Cookie</h1>
+	<h1>RFC -- Request for Comments</h1>
+	<h5>In web development, RFC stands for Request for Comments. It is a type of document used to describe proposals for new features or standards for the Internet. RFCs are created and published by the Internet Engineering Task Force (IETF) and are open for public comment and review.
+
+RFCs define standards for a variety of Internet technologies, including TCP/IP protocols, email standards, and web technologies. They are used to establish best practices and promote interoperability between different systems.
+
+When a new proposal is submitted for consideration, it is assigned an RFC number, and the document is made available for public review and feedback. Once the proposal has been thoroughly reviewed and revised, it may be adopted as a standard and published as an RFC.
+
+RFCs play a crucial role in the development and evolution of the Internet, as they help ensure that different systems can communicate with one another and that new technologies are compatible with existing ones.
+	</h5>
+	<ul>
+		<li>RFC 793 - Transmission Control Protocol (TCP)</li>
+		<li>RFC 821 - Simple Mail Transfer Protocol (SMTP)</li>
+		<li>RFC 822 - Standard for the Format of ARPA Internet Text Messages (Email format)</li>
+		<li>RFC 2616 - Hypertext Transfer Protocol (HTTP/1.1)</li>
+		<li>RFC 2822 - Internet Message Format (Updated email format standard)</li>
+		<li>RFC 959 - File Transfer Protocol (FTP)</li>
+		<li>RFC 768 - User Datagram Protocol (UDP)</li>
+		<li>RFC 2460 - Internet Protocol, Version 6 (IPv6)</li>
+		<li>RFC 2821 - Simple Mail Transfer Protocol (SMTP) (Updated email transfer protocol)</li>
+		<li>RFC 1149 - A Standard for the Transmission of IP Datagrams on Avian Carriers (Joke RFC describing how to transmit data using carrier pigeons)</li>
+  </body>
+
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css">
+        <title>List of Units</title>
+    </head>
+    <body>
+        <h1>Table showing units</h1>
+        <table>
+            <tr>
+                <th>code</th>
+                <th>title</th>
+            </tr>
+
+            <tr>
+                <td href="/study/unit/COMS10014">COMS10014</td>
+                <td>Mathematics A</td>
+            </tr>
+
+            <tr>
+                <td href="/study/unit/COMS10013">COMS10013</td>
+                <td>Mathematics B</td>
+            </tr>
+
+            <tr>
+                <td href="/study/unit/COMS10012">COMS10012</td>
+                <td>Software Tools</td>
+            </tr>
+
+            <tr>
+                <td href="/study/unit/COMS10016">COMS10016</td>
+                <td>Imperative and Functional Programming</td>
+            </tr>
+
+            <tr>
+                <td href="/study/unit/COMS10015">COMS10015</td>
+                <td>Computer Architecture</td>
+            </tr>
+
+            <tr>
+                <td href="/study/unit/COMS10017">COMS10017</td>
+                <td>Object-Oriented Programming and Algorithms 1</td>
+            </tr>
+        </table>
+        <h1>List of units</h1>
+        <ul>
+            <li>
+                <a href="/study/unit/COMS10014">COMS10014</a>
+                <span>Mathematics A</span>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <a href="/study/unit/COMS10013">COMS10013</a>
+                <span>Mathematics B</span>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <a href="/study/unit/COMS10012">COMS10012</a>
+                <span>Software Tools</span>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <a href="/study/unit/COMS10016">COMS10016</a>
+                <span>Imperative and Functional Programming</span>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <a href="/study/unit/COMS10015">COMS10015</a>
+                <span>Computer Architecture</span>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <a href="/study/unit/COMS10017">COMS10017</a>
+                <span>Object-Oriented Programming and Algorithms 1</span>
+            </li>
+        </ul>
+    </body>
+</html>

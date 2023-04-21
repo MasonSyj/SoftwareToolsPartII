@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+  <head>
+    <title>Descendant Selector</title>
+	<style>
+    .container p{
+       font-weight: bold; 
+    }
+
+    .container > .immediate {
+       font-style: italic; 
+    }
+
+    h3 + p {
+        color: blue;
+    }
+
+
+    .interval ~ .general {
+        color: red;
+    }
+
+	</style>
+  </head>
+  <body>
+  <div class="container">
+    
+    <p>First one, simplest style: '.container p' with no special character between</p>
+    <hr />
+    <h3>Second one, '.container > .immediate' Immediate Child Descendant:</h3>
+    <div class="immediate">This line is from the class immediate which symbol is '>'</div>
+    <div class="interval">
+        <div class="immediate">
+            This line however, from the immediate class, its parent class is interval not container<br>
+
+        </div>
+    </div>
+    <hr />
+    <div>
+        <h3>Third one, 'h3 + p' Adjacent Sibling Selector)</h3>
+        <p> First p after h3, since it's directly after h3</p>
+        <p> Second p after h3, this p is after a p, so it doesn't work here</p>
+    <div>
+    <hr />
+        <h3>Fourth one, 'h3 ~ p' General Sibling Selector</h3>
+        <div class="interval">
+            <div class="general">
+                This line is from general which parent is interval, means it's inside the interval also
+            </div>
+       </div> 
+       <div class="general">
+                This line is from general also but it's after the interval div'
+       </div>
+  </div>
+  </body>
+</html>

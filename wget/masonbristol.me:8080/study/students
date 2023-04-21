@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css">
+        <title>List of Units</title>
+    </head>
+    <body>
+        <h1>Table showing students</h1>
+        <table>
+            <tr>
+                <th>code</th>
+                <th>title</th>
+            </tr>
+
+            <tr>
+                <td ><a href="/study/student/Steven" >2021001</a></td>
+                <td>Steven</td>
+            </tr>
+
+            <tr>
+                <td ><a href="/study/student/Connie" >2021002</a></td>
+                <td>Connie</td>
+            </tr>
+        </table>
+        <h1>List of students</h1>
+        <ul>
+            <li>
+<!--                <a th:href="'/student/' + ${student.id}" th:text="${unit.id}"></a> -->
+                <span>Steven</span>
+            </li>
+        </ul>
+        <ul>
+            <li>
+<!--                <a th:href="'/student/' + ${student.id}" th:text="${unit.id}"></a> -->
+                <span>Connie</span>
+            </li>
+        </ul>
+    </body>
+</html>

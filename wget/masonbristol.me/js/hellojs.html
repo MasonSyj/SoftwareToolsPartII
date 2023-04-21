@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dynamic Content Example</title>
+  <style type="text/css">
+	.highlight {
+		background-color: yellow;
+	}
+  </style>
+
+  <script>
+    function updateContent() {
+      var element = document.getElementById("content");
+      element.innerHTML = "Hello, world!";
+    }
+	
+	function updateTextarea() {
+      var text = document.getElementById("myTextarea").value;
+      var element = document.getElementById("output");
+      element.innerHTML = text;
+    }
+	
+	function highlight() {
+      var element = document.getElementById("myParagraph");
+      element.classList.add("highlight");
+    }
+  </script>
+</head>
+<body>
+  <h1>Dynamic Content Example</h1>
+  <p id="content">Click the button to update the content.</p>
+  <button onclick="updateContent()">Update Content</button>
+
+   <h1>Dynamic Textarea Example</h1>
+  <textarea id="myTextarea" rows="4" cols="50" onchange="updateTextarea()"></textarea>
+  <p>Output:</p>
+  <div id="output"></div>
+
+  <h1>DOM Manipulation Example</h1>
+  <p id="myParagraph">Click the button to highlight me!</p>
+  <button onclick="highlight()">Highlight</button>
+</body>
+</html>
+
